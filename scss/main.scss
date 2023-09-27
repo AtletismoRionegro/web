@@ -1,0 +1,90 @@
+$logo-color: #ff0000;
+$primary-color: #212529;
+$secondary-color: #952323;
+$primary-text-color: #DAD4B5;
+$secondary-text-color: #F2E8C6;
+$font-stack: 'Montserrat', sans-serif;
+$paragraph-size: 1.5em;
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: $primary-color;
+    color: $secondary-text-color;
+    font-family: $font-stack;
+}
+
+nav {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+
+    img {
+        width: 94px;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 15px;
+
+        button {
+            background: none;
+            border-style: none;
+        }
+    }
+}
+
+article {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: $primary-text-color;
+    display: flex;
+    justify-content: space-between;
+
+    .impact-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        gap: 25px;
+    }
+
+    h1 {
+        font-size: 3em;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-size: $paragraph-size;
+    }
+
+    button {
+        border-style: none;
+        background-color: $secondary-color;
+        width: 12vw;
+        padding: 20px;
+        border-radius: 35px;
+        color: $primary-text-color;
+        font-family: $font-stack;
+        font-size: 1em;
+
+    }
+
+    img {
+        width: 50vw;
+        border-radius: 19px;
+    }
+}
+
+
+
+
+
+
+footer {
+    background-color: $secondary-color;
+    width: 100%;
+}
