@@ -1,79 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  margin: 0px;
-  padding: 0px;
   background-color: #212529;
   color: #F6F6F6;
   font-family: "Montserrat", sans-serif;
 }
-
-nav {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px;
-}
-nav img {
-  width: 94px;
-}
-nav .nav-items {
-  display: flex;
-  gap: 15px;
-}
-nav .nav-items button {
-  background: none;
-  border-style: none;
-}
-nav a {
+body a {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   color: gray;
 }
 
-article {
-  width: auto;
-  color: #F6F6F6;
+nav {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 2.4rem;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+nav .logo {
+  width: 9rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 2.4rem;
+}
+nav a {
+  display: none;
+}
+nav a.icon {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: gray;
+  display: block;
+  font-size: 3.3rem;
+  align-self: start;
+  padding-left: 2.4rem;
+}
+nav .responsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+}
+nav .responsive a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: gray;
+  display: inline-block;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 25px;
+  align-items: flex-start;
+  padding: 2.5rem;
+}
+article .image-section {
+  align-self: center;
+}
+article .image-section img {
+  max-width: 32rem;
+  border-radius: 19px;
+}
+article .image-section:hover {
+  transform: scale(1.01);
+  transition-duration: 0.5s;
 }
 article .impact-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 40px;
-  gap: 25px;
+  align-items: center;
+  padding-top: 3rem;
+  align-self: center;
 }
-article h1 {
+article .impact-section h1 {
   font-size: 3em;
-  padding: 0;
-  margin: 0;
+  color: #ff0000;
+  text-align: center;
 }
-article p {
-  font-size: 1.5em;
+article .impact-section p {
+  font-size: 1.6rem;
+  text-align: center;
 }
-article button {
+article .impact-section button {
+  background: none;
   border-style: none;
-  background-color: #952323;
-  width: 12vw;
-  padding: 20px;
-  border-radius: 35px;
-  color: #F6F6F6;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
 }
-article button:hover {
+article .impact-section button {
+  margin: 4rem 0;
+}
+article .impact-section button a {
+  padding: 2rem;
+  color: #F6F6F6;
+  background-color: #952323;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 3rem;
+  font-size: 1.3rem;
+}
+article .impact-section button:hover {
   transform: scale(1.1);
   transition-duration: 0.3s;
   cursor: pointer;
-}
-article img {
-  width: 50vw;
-  border-radius: 19px;
 }
 
 .records {
@@ -88,112 +128,99 @@ article img {
 }
 
 section {
-  width: auto;
-  height: auto;
-  padding: 40px;
+  padding: 2.5rem;
 }
 section h2 {
   color: #F2E8C6;
   font-size: 2em;
 }
-section .enfoques, section .actividades {
-  padding-bottom: 10px;
+section .enfoques h2 {
+  font-weight: bold;
+  padding: 3rem 0 1rem 0;
 }
-section .enfoques h2, section .actividades h2 {
-  font-weight: 300;
-  padding-bottom: 30px;
-}
-section .enfoques .card-section, section .actividades .card-section {
-  width: auto;
-  height: auto;
+section .enfoques .card-section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
 }
-section .enfoques .product-card, section .actividades .product-card {
-  width: 13vw;
-  height: auto;
+section .enfoques .product-card {
   background-color: #952323;
   color: #F6F6F6;
-  padding: 20px;
-  border-radius: 5px;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  max-width: 15rem;
+  font-size: 1.5rem;
 }
-section .enfoques .product-card .icon, section .actividades .product-card .icon {
-  width: 100%;
+section .enfoques .product-card .product-image {
   display: flex;
-  justify-content: flex-end;
-  padding-bottom: 12px;
-}
-section .enfoques .product-card .icon svg, section .actividades .product-card .icon svg {
-  width: 36px;
-  height: 36px;
-  stroke: #F2E8C6;
-}
-section .enfoques .product-card .product-image, section .actividades .product-card .product-image {
-  width: 100%;
-  height: auto;
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-section .enfoques .product-card .product-image img, section .actividades .product-card .product-image img {
-  padding-top: 2vh;
-  width: 18vw;
-  height: 16vh;
+section .enfoques .product-card .product-image img {
+  padding: 0.5rem 0 1.5rem 0;
+  width: 12rem;
+  height: 10rem;
   object-fit: cover;
-  border-radius: 6px;
-}
-section .actividades .product-card {
-  background-color: rgba(0, 0, 255, 0.5568627451);
+  border-radius: 1rem;
 }
 
-.about-us {
-  padding-bottom: 60px;
-}
 .about-us h2 {
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
 }
 .about-us .mision-section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.about-us .mision-section .lion, .about-us .mision-section .lions {
-  width: 30vw;
+.about-us .mision-section .lion,
+.about-us .mision-section .lions {
   display: flex;
-  gap: 40px;
-  color: #ea7070;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 }
-.about-us .mision-section .lion img, .about-us .mision-section .lions img {
-  object-fit: contain;
+.about-us .mision-section .lion img,
+.about-us .mision-section .lions img {
+  width: 12rem;
+  object-fit: cover;
 }
-.about-us .mision-section .lion p, .about-us .mision-section .lions p {
-  text-align: center;
-  font-size: 20px;
+.about-us .mision-section .lion img:hover,
+.about-us .mision-section .lions img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+.about-us .mision-section .lion p,
+.about-us .mision-section .lions p {
+  text-align: start;
+  font-size: 1.5rem;
 }
 
 .gallery {
-  padding-bottom: 60px;
+  padding: 2.5rem 0;
 }
 .gallery h2 {
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
 }
 .gallery .gallery-images {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .gallery .gallery-images img {
   object-fit: cover;
-  width: 28vw;
-  height: 45vh;
-  border-radius: 16px;
+  width: 10rem;
+  height: 20rem;
+  border-radius: 1.5rem;
 }
 .gallery .gallery-images img:hover {
   transform: scale(1.1);
@@ -201,35 +228,233 @@ section .actividades .product-card {
 }
 
 .location {
-  color: #ea7070;
-  padding-bottom: 50px;
+  padding: 2.5rem 0;
+}
+.location h2 {
+  padding-bottom: 1rem;
 }
 .location .map {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 1rem;
+}
+.location .map img {
+  width: 30rem;
 }
 .location h3 {
-  font-size: 1.5em;
+  font-size: 1.6rem;
 }
 .location p {
-  font-size: 1.5em;
+  font-size: 1.6rem;
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: #952323;
-  width: auto;
-  height: auto;
   color: #F6F6F6;
-  padding: 40px;
+  padding: 2rem;
+  padding-bottom: 0;
+  gap: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+footer img {
+  width: 9rem;
 }
 footer .social-media {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  color: white;
+  gap: 2rem;
+}
+footer .social-media .contact p {
+  padding-bottom: 1rem;
+}
+footer .social-media a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: gray;
+}
+footer .social-media a i {
+  font-size: 3rem;
+  color: #F6F6F6;
+}
+footer .mail-info {
+  align-self: center;
+}
+footer .mail-info a {
+  color: #F2E8C6;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  nav .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 5rem;
+    gap: 15px;
+  }
+  nav .nav-items a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: gray;
+    display: inline-block;
+    font-size: 2rem;
+  }
+  nav .nav-items a:hover {
+    background-color: #F2E8C6;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  nav a.icon {
+    display: none;
+  }
+  article {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5rem;
+    gap: 1rem;
+  }
+  article img {
+    min-width: 42rem;
+  }
+  article .impact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  article .impact-section h1 {
+    font-size: 3.8rem;
+    color: #ff0000;
+    text-align: center;
+  }
+  article .impact-section p {
+    font-size: 1.6rem;
+  }
+  article .impact-section p span:hover {
+    color: #952323;
+    transform: scale(1.01);
+    transition-duration: 0.5s;
+  }
+  article .impact-section button {
+    align-self: center;
+  }
+  article .impact-section button a {
+    border-radius: 3rem;
+    font-size: 1.6rem;
+  }
+  article .impact-section button:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+  section .product-image img {
+    width: 15rem;
+    height: 12rem;
+  }
+  .about-us {
+    padding: 2.5rem;
+  }
+  .about-us .mision-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  .about-us .mision-section .lion,
+  .about-us .mision-section .lions {
+    gap: 0.5rem;
+    color: #ea7070;
+  }
+  .about-us .mision-section .lion img,
+  .about-us .mision-section .lions img {
+    object-fit: contain;
+    width: 20rem;
+  }
+  .about-us .mision-section .lion p,
+  .about-us .mision-section .lions p {
+    font-size: 2rem;
+  }
+  .gallery {
+    padding: 2.5rem;
+  }
+  .gallery .gallery-images img {
+    width: 22rem;
+    height: 30rem;
+  }
+  .location {
+    padding: 2.5rem;
+  }
+  .location h2 {
+    padding-bottom: 1.5rem;
+  }
+  .location .map {
+    padding-bottom: 1.5rem;
+  }
+  .location .map img {
+    width: 50rem;
+  }
+  .location h3 {
+    font-size: 1.9rem;
+  }
+  .location p {
+    font-size: 1.8rem;
+  }
+  footer {
+    font-size: 1.7rem;
+    padding: 2.5rem;
+  }
+  footer .social-media {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+  footer .social-media a i {
+    font-size: 4rem;
+    padding: 0 1rem;
+  }
+  footer .mail-info a {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 920px) {
+  article {
+    padding: 5rem;
+    gap: 5rem;
+  }
+  article img {
+    min-width: 62rem;
+  }
+  article .impact-section {
+    gap: 3rem;
+  }
+  article .impact-section h1 {
+    font-size: 4.8rem;
+  }
+  article .impact-section p {
+    font-size: 2.4rem;
+  }
+  article .impact-section button a {
+    font-size: 2.2rem;
+  }
+  .gallery .gallery-images img {
+    width: 28rem;
+    height: 30rem;
+  }
 }/*# sourceMappingURL=main.css.map */
