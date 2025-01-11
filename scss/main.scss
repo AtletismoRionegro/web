@@ -67,7 +67,7 @@ nav {
         font-size: 5rem;
         position: absolute;
         top: 2.4rem;
-        left: 50rem;
+        left: 20rem;
     }
 
     a {
@@ -85,6 +85,10 @@ nav {
     .responsive {
         @include flexCenter(column, flex-end, flex-end);
         gap: 15px;
+
+        .anio {
+            left: 10rem
+        }
 
         a {
             @include cleanFormat();
@@ -379,10 +383,15 @@ footer {
 
 @media (min-width: 700px) {
     nav {
+        .anio {
+            left: 50rem;
+        }
+
         .nav-items {
             @include flexCenter(row, flex-end, flex-end);
             padding-right: 5rem;
             gap: 15px;
+
 
             a {
                 @include cleanFormat();
