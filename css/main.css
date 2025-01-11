@@ -34,6 +34,13 @@ nav .logo {
   top: 2.4rem;
   left: 2.4rem;
 }
+nav .anio {
+  color: gold;
+  font-size: 5rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 50rem;
+}
 nav a {
   display: none;
 }
@@ -116,17 +123,6 @@ article .impact-section button:hover {
   cursor: pointer;
 }
 
-.records {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-}
-.records iframe {
-  width: 66%;
-  height: 100%;
-  border: none;
-}
-
 section {
   padding: 2.5rem;
 }
@@ -151,8 +147,13 @@ section .enfoques .product-card {
   color: #F6F6F6;
   border-radius: 0.5rem;
   padding: 2rem 1rem;
-  max-width: 15rem;
+  max-width: 18rem;
+  max-height: 25rem;
   font-size: 1.5rem;
+}
+section .enfoques .product-card:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 section .enfoques .product-card .product-image {
   display: flex;
@@ -259,7 +260,6 @@ footer {
   color: #F6F6F6;
   padding: 2rem;
   padding-bottom: 0;
-  gap: 1rem;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -271,7 +271,9 @@ footer .social-media {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+}
+footer .social-media .contact a i {
+  padding: 0 2rem;
 }
 footer .social-media .contact p {
   padding-bottom: 1rem;
@@ -285,12 +287,42 @@ footer .social-media a i {
   font-size: 3rem;
   color: #F6F6F6;
 }
+footer .social-media p {
+  font-weight: bold;
+}
 footer .mail-info {
   align-self: center;
 }
 footer .mail-info a {
   color: #F2E8C6;
   font-size: 1.5rem;
+}
+
+.records {
+  min-width: 100%;
+  height: 131vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10rem 0;
+}
+.records h1 {
+  font-size: 2.4rem;
+}
+.records iframe {
+  border: none;
+  border-radius: 2rem;
+  width: 95vw;
+  height: 100%;
+}
+
+.historia {
+  margin: 2rem;
+}
+.historia .inicios p {
+  font-size: 1.6rem;
 }
 
 @media (min-width: 700px) {
@@ -432,6 +464,12 @@ footer .mail-info a {
   footer .mail-info a {
     font-size: 2rem;
   }
+  .records iframe {
+    width: 70rem;
+  }
+  .historia {
+    margin: 5rem;
+  }
 }
 @media (min-width: 920px) {
   article {
@@ -456,5 +494,11 @@ footer .mail-info a {
   .gallery .gallery-images img {
     width: 28rem;
     height: 30rem;
+  }
+  .records iframe {
+    width: 70rem;
+  }
+  .historia {
+    margin: 10rem;
   }
 }/*# sourceMappingURL=main.css.map */
